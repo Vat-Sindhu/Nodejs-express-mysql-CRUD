@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <div>
+            <h2><%= title %></h2>
+            <form action="/update" method="post">
+                <input type="hidden" value="<%=user.userId%>" name="id">
+                <div >
+                    <label for="name">UserName:</label>
+                    <input type="text" id="uname" placeholder="Enter username" name="name" value="<%= user.username %>" required/>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="text" id="pwd" placeholder="Enter password" name="password" value="<%= user.password %>" required/>
+                </div>
+                <div>
+                    <label for="phone">PhoneNumber:</label>
+                    <input type="text" id="phonenumber" placeholder="Enter Phonenumber" name="phonenumber" value="<%= user.phonenumber %>" required/>
+                </div>
+                <button type="submit" style="color:red">Submit</button>
+            </form>
+
+        </div>
+    </body>
+</html>

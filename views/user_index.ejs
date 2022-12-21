@@ -1,0 +1,37 @@
+<html>
+       <body>
+        <div >
+        <h2><%= title %></h2><br>
+       
+        <a href="/add/<%=userLength%>" style="background-color:aqua" >Add User</a></button><br><br>
+        <div >
+        <table style="border:solid gold;background-color:bisque">
+            <thead>
+                <tr style="border:solid 2px  gray">
+                   <th>S.No</th> 
+                   <th>Username</th>
+                   <th>Password</th>
+                   <th>Phone No:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% user.forEach(function(user){ %>
+                <tr style="border:solid 2px  gray">
+                    <td style="border:solid 2px brown">
+                        <%= user.userId %></td>
+                        <td style="border:solid 2px brown"><%= user.username %></td>
+                        <td style="border:solid 2px brown"><%= user.password %></td>
+                        <td style="border:solid 2px brown"><%= user.phonenumber %></td>
+                        <td style="border:solid 2px brown">
+                            <a href="edit/<%=user.userId%>"  class="btn btn-sm btn-primary">Edit</a></button>
+                            <a href="delete/<%=user.userId%>" class="btn btn-sm btn-danger">Delete</a></button>
+                        </td>
+                    </tr>
+
+                      <% }); %>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </body>
+</html>
